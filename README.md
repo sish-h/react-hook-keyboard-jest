@@ -1,28 +1,29 @@
-## Available Scripts
+# react-hook-keyboard-jest
+A TypeScript library that provides a React hook for handling keyboard events, along with Jest tests to ensure it works as expected.
 
-In the project directory, you can run:
+## What it does
+This hook allows you to easily listen to keyboard events in your React application, providing a simple and effective way to handle user input.
 
-### `npm start`
+## Installation
+To get started, simply run `npm install` or `yarn install` to install the dependencies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+To use the hook, import it into your component and call it with the event you want to listen for. For example:
+```typescript
+import { useKeyboardEvent } from './useKeyboardEvent';
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+function MyComponent() {
+  useKeyboardEvent('keydown', (event) => {
+    if (event.key === 'Enter') {
+      console.log('Enter key pressed');
+    }
+  });
 
-### `npm test`
+  return <div>Press the Enter key</div>;
+}
+```
+## Running the tests
+To run the Jest tests, simply run `npm run test` or `yarn test`. This will execute the tests and report any failures.
 
-Launches the test runner in the interactive watch mode.\
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-### `Live link`
-
-https://react-hook-keyboard.vercel.app/
+## Contributing
+Feel free to contribute to this repository by submitting a pull request. Make sure to include tests for any new functionality.
